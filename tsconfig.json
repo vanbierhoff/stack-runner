@@ -14,7 +14,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@v-stack-runner/source": ["src/index.ts"]
+      "@v/stack-runner": ["src/index.ts"]
     }
   },
   "files": [],
