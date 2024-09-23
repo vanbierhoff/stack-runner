@@ -40,4 +40,5 @@ describe('Stack tets', () => {
       expect('result').toEqual('string');
     });
   });
+  
 });

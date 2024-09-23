@@ -8,4 +8,4 @@ export * from './scheduler/models';
 // implements stack
 export * from './stack/stack';
 // implements runner
-export * from './scheduler/scheduler';
+export * from './scheduler/runner';
