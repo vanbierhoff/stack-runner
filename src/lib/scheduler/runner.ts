@@ -22,7 +22,6 @@ export class BaseScheduler implements RunnerInterface {
   isRunning: boolean = false;
 
   toRun<T>(task: TaskInterface): void {
-    // try {
     switch (this.type) {
       case 'microtask':
         this.useMicrotaskRunner<T>(task);
@@ -30,13 +29,6 @@ export class BaseScheduler implements RunnerInterface {
       case 'sync':
         this.useSyncRunner<T>(task);
     }
-    // }
-    // catch (error) {
-    //     task.status = TaskStatus.ERROR;
-    //     task[INTERNAL_FINISH_CB_SYM](task);
-    //
-    // }
-
   }
 
   useSyncRunner<T>(task: TaskInterface) {
@@ -84,6 +76,7 @@ export class BaseScheduler implements RunnerInterface {
       }
       cb(runningFn);
     }
+    // TODO change to throw
     catch (err) {
       cb(err);
     }

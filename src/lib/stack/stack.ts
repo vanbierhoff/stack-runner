@@ -79,6 +79,10 @@ export class Stack implements StackManagerInterface {
         this.isActiveRunning = false;
     }
 
+    hasTasks(task: TaskInterface): boolean {
+      return this.#stackList.includes(task);
+    }
+
     finishCallback(task: TaskInterface) {
         this.#stackList.splice(task[INTERNAL_ID_SYM], 1);
         this.next();
